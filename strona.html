@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formularz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <form id="myForm" onsubmit="handleSubmit(event)">
+    <label for="imie">Imię:</label>
+    <input type="text" id="imie" required><br>
+
+    <label for="nazwisko">Nazwisko:</label>
+    <input type="text" id="nazwisko" required><br>
+
+    <label for="data">Data urodzenia:</label>
+    <input type="date" id="data" required><br>
+
+    <label for="pijany">Czy jesteś trzeźwy/a?</label>
+    <input type="checkbox" id="pijany"><br>
+
+    <label for="pd">Czy zgadzasz się na przetwarzanie danych osobowych?</label>
+    <input type="checkbox" id="pd" required><br>
+
+    <label for="miejsce">Wybierz siedzenie (od 1 do 10):</label>
+    <input type="number" id="miejsce" min="1" max="10" required><br>
+
+    <button type="submit">Wyślij</button>
+  </form>
+
+  <script src="nowy.js"></script>
+</body>
+</html>

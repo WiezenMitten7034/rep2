@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wynik formularza</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Dane z formularza:</h1>
+  <div id="result"></div>
+
+  <script>
+   
+    const queryString = window.location.search.substring(1);
+    const formData = Object.fromEntries(new URLSearchParams(queryString));
+
+    
+    const resultDiv = document.getElementById('result');
+    for (const [key, value] of Object.entries(formData)) {
+      const paragraph = document.createElement('p');
+      paragraph.textContent = `${key}: ${value}`;
+      resultDiv.appendChild(paragraph);
+    }
+  </script>
+</body>
+</html>
